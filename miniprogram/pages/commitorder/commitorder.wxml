@@ -1,0 +1,36 @@
+<scroll-view class="h" scroll-y="true">
+  <view wx:for="{{cartlist}}" wx:key="_id">
+    <van-card num="{{item.number}}" price="{{item.price}}" desc="{{item.des}}" title="{{item.title}}"
+      thumb="{{item.imgurl[0]}}">
+    </van-card>
+  </view>
+</scroll-view>
+<view wx:if="{{fousc}}">
+  <van-field value="{{ tel }}"  border="{{ false }}" bind:blur="onChange" />
+</view>
+<view wx:else>
+  <van-cell title="收货手机号" value="{{tel}}" bindtap="changetel"/>
+</view>
+>
+<van-tree-select items="{{ items }}" height="40vw" main-active-index="{{ mainActiveIndex }}" active-id="{{ activeId }}"
+  bind:click-item="onClickItem">
+</van-tree-select>
+
+<view class="bottom">
+  <view class="number">共{{number}}件商品</view>
+  <view class="price">合计:
+    <view class="total">
+      ￥{{total}}
+    </view>
+  </view>
+  <van-button round type="danger" class="button" bindtap="payClick">去支付</van-button>
+</view>
+<van-overlay show="{{ show }}">
+  <view class="wrapper">
+    <view class="block">
+      是否已支付
+      <van-button class="showbutton" type="defalut" bind:click="onHide">未支付</van-button>
+      <van-button class="showbutton" type="danger" bind:click="onClickHide">已支付</van-button>
+    </view>
+  </view>
+</van-overlay>

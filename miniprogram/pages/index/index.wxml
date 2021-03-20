@@ -1,0 +1,11 @@
+<van-search value="{{ value }}" placeholder="请输入搜索关键词" bindtap="searchClick" />
+<view class="title">请选择一下需要购买的商品类型</view>
+<view class="list">
+<van-cell title="书籍" is-link link-type="navigateTo" url="" bindtap="bookClick" />
+<van-cell title="自行车" is-link link-type="navigateTo" url="" bindtap="bikeClick" />
+<van-cell title="电脑" is-link link-type="navigateTo" url="" bindtap="computerClick" />
+</view>
+<view class="upbut" >如需上传图片请点击<image src="../../images/upload.png" class="img"></image></view>
+<view class="addbut" >如需发布商品请点击按钮👇</view>
+
+<van-icon class="add" name="add-o" bindtap="toadd" />

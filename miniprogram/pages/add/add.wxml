@@ -1,0 +1,16 @@
+<!--pages/add/add.wxml-->
+<van-cell-group>
+  <van-picker columns="{{ typelist }}" wx:if="{{!change}}"  bind:change="typeChange" visible-item-count="2" />
+  <van-field value="{{ title }}" label="商品名称" placeholder="{{change?'title':'如：书名/品牌'}}" bind:change="titleChange" />
+  <van-field value="{{ des }}" label="商品描述" placeholder="{{change?'des':'如：作者/配置/型号'}}" bind:change="desChange" />
+  <van-field value="{{ used }}" label="已用年限" placeholder="{{used}}" bind:change="usedChange" />
+  <van-field value="{{ number}}" label="数量" placeholder="{{nubmer}}" bind:change="numChange" />
+  <van-field value="{{ price }}" label="价格" placeholder="{{price}}" bind:change="priceChange" />
+</van-cell-group>
+<view class="upimg">
+  <view class="content">上传图片</view>
+<image class="img" src="{{imgurl1}}" bindtap="upimg1"></image>
+<image class="img" src="{{imgurl2}}" bindtap="upimg2"></image>
+<image class="img" src="{{imgurl3}}" bindtap="upimg3"></image>
+</view>
+<van-button color="linear-gradient(to right, #4bb0ff, #6149f6)" block bindtap="{{change?'changeClick':'addClick'}}">{{change?'确认修改':'发布'}}</van-button>

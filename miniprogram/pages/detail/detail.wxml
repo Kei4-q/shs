@@ -1,0 +1,15 @@
+<!--pages/detail/detail.wxml-->
+<swiper class="img">
+<swiper-item  wx:for="{{imglist}}" wx:for-item="item" wx:for-index="index" wx:key="index">
+<image mode="scaleToFill" src="{{item}}" ></image>
+</swiper-item>
+</swiper>
+<view class="title">{{title}}</view>
+<view class="des">{{des}}</view>
+<van-cell title="价格" value="{{'￥'+price}}" />
+<van-cell title="数量" value="{{number}}" />
+<van-cell title="使用年限" value="{{used}}" />
+<van-goods-action>
+  <van-goods-action-button text="加入购物车" type="warning" bindtap="addCart" />
+  <van-goods-action-button text="立即购买" bindtap="buyClick" />
+</van-goods-action>

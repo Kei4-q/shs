@@ -1,0 +1,21 @@
+/* pages/product/product.wxss */
+.add{
+  font-size: 80rpx;
+  color: #888;
+  position: fixed;
+  bottom: 60rpx;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 100;
+}
+.empty{
+  height: 100rpx;
+  width: 100%;
+  line-height: 100rpx;
+  text-align: center;
+  font-weight: bold;
+  color: #888;
+}
+.delbutton{
+  margin-left: 10rpx;
+}

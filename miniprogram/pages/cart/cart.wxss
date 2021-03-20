@@ -1,0 +1,53 @@
+/* pages/cart/cart.wxss */
+.van-card{
+width: 700rpx;
+
+}
+.h{
+  height: 1050rpx;
+}
+.van-submit-bar{
+  height: 110rpx;
+  z-index: 100;
+}
+.l0{
+  position: absolute;
+  left: 0;
+  top: 40rpx;
+}
+.empty{
+  height: 100rpx;
+  width: 100%;
+  line-height: 100rpx;
+  text-align: center;
+  font-weight: bold;
+  color: #888;
+}
+.bottom{
+  position: fixed;
+  width: 100%;
+  height: 110rpx;
+  bottom: 0;
+  background-color: #fff;
+}
+.price{
+  height: 110rpx;
+  font-weight: bold;
+  float: left;
+  font-size: 35rpx;
+  line-height: 110rpx;
+  margin-left: 350rpx;
+}
+.total{
+  float: right;
+  line-height: 118rpx;
+  color: red;
+  font-weight:500;
+  font-size: 30rpx;
+}
+
+.button{
+  float: right;
+  line-height: 100rpx;
+  margin-right: 6rpx;
+}

@@ -1,0 +1,25 @@
+<!--pages/order/order.wxml-->
+
+<view wx:if="{{empty}}">
+<van-divider contentPosition="center">未完成订单</van-divider>
+<view class="order" wx:for="{{notdonelist}}" wx:for-item="item" wx:for-index="index" wx:key="index">
+  <view data-id="{{item._id}}" bindtap="orderdetail">
+  <image mode="aspescFit" class="img" src="{{item.order[0].imgurl[0]}}"></image>
+  <image mode="aspescFit" wx:if="{{item.order[1].imgurl[0]}}" class="img" src="{{item.order[1].imgurl[0]}}"></image>
+  <view class="total">共{{item.number}}件商品</view>
+  <view class="price">￥{{item.total}}</view>
+  <view class="done">未支付</view>
+  </view>
+  <van-button type="default" data-id="{{item._id}}" size="small" bindtap="delorder">删除</van-button>
+</view>
+<van-divider contentPosition="center">已完成订单</van-divider>
+<view class="order" wx:for="{{donelist}}" wx:for-item="item" wx:for-index="index" wx:key="index">
+  <image mode="aspescFit" class="img" src="{{item.order[0].imgurl[0]}}"></image>
+  <image mode="aspescFit" class="img" src="{{item.order[1].imgurl[0]}}"></image>
+  <view class="total">共{{item.number}}件商品</view>
+  <view class="price">￥{{item.total}}</view>
+  <view class="done">已支付</view>
+  <van-button type="default" data-id="{{item._id}}" size="small" bindtap="delorder">删除</van-button>
+</view>
+</view>
+<view class="empty" wx:else >目前还没有订单哦！</view>

@@ -1,0 +1,16 @@
+/* pages/register/register.wxss */
+.have_user{
+  color: #aaa;
+  float: left;
+  width: 200rpx;
+  height: 40rpx;
+  margin-left: 10rpx;
+  margin-top:8rpx;
+  font-size: 28rpx;
+  line-height: 40rpx;
+}
+.all{
+  width: 100%;
+  position: absolute;
+  top: 150rpx;
+}

@@ -1,0 +1,22 @@
+<view class="all">
+<van-cell-group>
+  <van-field
+    value="{{phone}}"
+    required
+    clearable
+    label="手机号"
+    placeholder="请输入手机号"
+    bind:blur="onChangetel"
+  />
+  <van-field
+    value="{{ password }}"
+    type="password"
+    label="密码"
+    placeholder="请输入密码"
+    required
+    bind:blur="onChangepsd"
+  />
+</van-cell-group>
+<van-button color="linear-gradient(to right, #4bb0ff, #6149f6)" size="large" bindtap="loginapp">登录</van-button>
+<navigator url="/pages/register/register"><view class="no_user" >没有账号？注册</view></navigator>
+</view>

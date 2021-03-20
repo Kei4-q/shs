@@ -1,0 +1,34 @@
+<van-search value="{{ value }}" placeholder="请输入搜索关键词" bindtap="searchClick" />
+<view wx:if="{{empty}}" class="empty">
+  快添加商品进来吧！
+</view>
+<view wx:else>
+<scroll-view class="h" scroll-y="true" >
+<view wx:for="{{cartlist}}" wx:key="_id">
+  <van-checkbox name="{{item._id}}"  wx:for-item="item" wx:for-index="idx" data-index="{{index}}" value="{{item.checked}}" bind:change="onChange">
+    <van-card
+  num="{{item.number}}"
+  price="{{item.price}}"
+  desc="{{item.des}}"
+  title="{{item.title}}"
+  thumb="{{item.imgurl[0]}}"
+  thumb-link="../detail/detail?id={{item._id}}"
+  >
+  <view slot="footer">
+    <van-button size="mini" data-id="{{item._id}}" data-index="{{index}}" bindtap="delcart">删除</van-button>
+  </view>
+</van-card>
+</van-checkbox>
+</view>
+</scroll-view>
+<view class="bottom">
+<van-tag type="primary">
+<van-checkbox value="{{ checked }}" bind:change="all" class="l0" >全选</van-checkbox>
+</van-tag>
+<view class="price">合计:
+<view class="total">
+  ￥{{total}}
+</view></view>
+<van-button round type="danger" class="button"  bindtap="commit">提交订单</van-button>
+</view>
+</view>

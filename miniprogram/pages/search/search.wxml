@@ -1,0 +1,28 @@
+<!--pages/search/search.wxml-->
+<view class="search" >
+  <van-search  class="search1" value="{{ value }}" placeholder="请输入搜索关键词" bindblur="changeSearch"/>
+  <view class="search2" bindtap="searchClick">搜索</view>
+</view>
+
+<view class="history" >
+  <view class="history-top">
+    <image src="../../images/searchhis.png" class="hisicon"></image>
+    <view class="wenzi">历史搜索</view>
+    <image src="../../images/bin.png" class="hisbin" bindtap="del"></image>
+  </view>
+  <view wx:for="{{records}}" wx:key="index" wx:for-index="index"  wx-key="{{index}}" wx:for-item="item">
+    <view class="history-content" data-index="{{index}}" bindtap="recordClick">{{item.content}}</view>
+  </view>
+</view>
+<van-card class="card" wx:for="{{product}}" wx:for-index="index" data-index="{{index}}" wx:for-item="item" wx:key="_id"
+  num="{{item.number}}"
+  price="{{item.price}}"
+  desc="{{item.des}}"
+  title="{{item.title}}"
+  thumb="{{item.imgurl}}"
+>
+  <view slot="footer">
+    <van-button size="mini">添加到购物车</van-button>
+    <van-button size="mini">删除</van-button>
+  </view>
+</van-card>

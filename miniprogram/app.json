@@ -1,0 +1,54 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/register/register",
+    "pages/login/login",
+    "pages/mine/mine",
+    "pages/cart/cart",
+    "pages/product/product",
+    "pages/search/search",
+    "pages/order/order",
+    "pages/add/add",
+    "pages/detail/detail",
+    "pages/commitorder/commitorder"
+  ],
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#F6F6F6",
+    "navigationBarTitleText": "佛大二手交易平台",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#2c2c2c",
+    "selectedColor": "#0b80c6",
+    "borderStyle": "white",
+    "list": [
+      {
+        "iconPath":"images/main.png",
+        "selectedIconPath":"images/main1.png",
+        "pagePath": "pages/index/index",
+        "text": "主页"
+      },
+      {
+        "iconPath":"images/dingdan.png",
+        "selectedIconPath":"images/dingdan1.png",
+        "pagePath": "pages/order/order",
+        "text": "订单"
+      },
+      {
+        "iconPath":"images/cart.png",
+        "selectedIconPath":"images/cart1.png",
+        "pagePath": "pages/cart/cart",
+        "text": "购物车"
+      },
+      {
+        "iconPath":"images/mine.png",
+        "selectedIconPath":"images/mine1.png",
+        "pagePath": "pages/mine/mine",
+        "text": "我的"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

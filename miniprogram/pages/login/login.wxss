@@ -1,0 +1,18 @@
+/* pages/login/login.wxss */
+.no_user{
+  color: #aaa;
+  float: right;
+  width: 200rpx;
+  height: 40rpx;
+  margin-right: 10rpx;
+  margin-top:8rpx;
+  font-size: 28rpx;
+  line-height: 40rpx;
+}
+.all{
+  position: absolute;
+  width: 100%;
+  height: 450rpx;
+  top: 150rpx;
+ 
+}

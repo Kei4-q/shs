@@ -1,0 +1,21 @@
+/* pages/add/add.wxss */
+.van-picker{
+  height: 200rpx;
+}
+.upimg{
+  height: 150rpx;
+  font-size: 26rpx;
+  margin-left: 30rpx;
+  margin-bottom: 30rpx;
+}
+.content{
+  float: left;
+  width: 110rpx;
+  line-height: 120rpx;
+}
+.img{
+  float: left;
+  margin-left: 70rpx;
+  width: 120rpx;
+  height: 120rpx;
+}

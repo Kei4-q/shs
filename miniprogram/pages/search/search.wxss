@@ -1,0 +1,67 @@
+/* pages/search/search.wxss */
+.search{
+  display: flex;
+  height: 75rpx;
+}
+.search1{
+flex: 5;
+}
+.search2{
+flex: 1;
+line-height: 100rpx;
+font-size: 34rpx;
+font-weight: bold;
+color: #666;
+}
+.history{
+  float:left;
+  width: 720rpx;
+  margin: 10rpx auto;
+  padding: 0 10rpx;
+}
+.history-top{
+  float: left;
+  width: 730rpx;
+  height: 50rpx;
+  margin-top: 25rpx;
+}
+.hisicon{
+  width: 50rpx;
+  height: 50rpx;
+  float: left;
+  margin-right: 10rpx;
+}
+.wenzi{
+  height: 50rpx;
+  width: 300rpx;
+  line-height: 50rpx;
+  font-weight: bold;
+  float: left;
+  color: #666;
+}
+.hisbin{
+  width: 30rpx;
+  height: 30rpx;
+  float: left;
+  margin-left: 300rpx;
+  margin-top: 10rpx;
+}
+.history-content{
+  float: left;
+  height: 50rpx;
+  line-height: 50rpx;
+  font-size: 30rpx;
+  font-family: "黑体";
+  width: auto;
+  background-color: #ddd;
+  padding: 5rpx 20rpx;
+  margin-top:10rpx ;
+  margin-left: 5rpx;
+  margin-right: 5rpx;
+  border-radius: 20rpx;
+  margin-bottom:20rpx ;
+}
+.card{
+  width: 750rpx;
+  float: left;
+}
