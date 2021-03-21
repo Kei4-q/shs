@@ -13,7 +13,7 @@ App({
       user_id:'',
       username:'',
       password:'',
-      tel:'',
+      tel:'13534580047',
       wxNum:'',
       qqNum:'',
       user_image:''

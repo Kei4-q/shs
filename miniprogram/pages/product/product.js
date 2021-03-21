@@ -16,7 +16,6 @@ Page({
       type: '',
       empty: false,
     },
-    disbaled:false
   },
 
   /**
@@ -85,7 +84,6 @@ Page({
           let id=res.data[0]._id
           if(res.data.length!==0){
             let number=parseInt(res.data[0].number)+1
-            console.log(number)
             cart.doc(id).update({
               data:{
                 number:number
@@ -107,13 +105,10 @@ Page({
             }
           }).then(() => {
               let number=parseInt(that.data.number-1)
+              console.log(number)
               if(number!==0){
                 that.setData({
                   number:number
-                })
-              }else{
-                that.setData({
-                  disbaled:true
                 })
               }
               that.onLoad(that.data.t)
