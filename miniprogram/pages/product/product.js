@@ -15,7 +15,8 @@ Page({
     t: {
       type: '',
       empty: false,
-    }
+    },
+    disbaled:false
   },
 
   /**
@@ -77,32 +78,50 @@ Page({
         that.setData({
           number:res.data.number
         })
-        cart.add({
-          data: {
-            tel:app.globalData.tel,
-            des: res.data.des,
-            imgurl: res.data.imgurl,
-            number: '1',
-            price: res.data.price,
-            title: res.data.title,
-            type: res.data.title,
-            used:res.data.used,
-            checked:false,
-
+        cart.where({
+          title:_.eq(res.data.title),
+          tel:_.eq(app.globalData.tel)
+        }).get().then(res=>{
+          let id=res.data[0]._id
+          if(res.data.length!==0){
+            let number=parseInt(res.data[0].number)+1
+            console.log(number)
+            cart.doc(id).update({
+              data:{
+                number:number
+              }
+            })
           }
-        }).then(() => {
-            let number=parseInt(that.data.number)-1
-            if(number==0){
-              productInfo.doc(id).update({
-                data:{
-                  disbaled:true
-                }
-              })
+        }).catch(()=>{
+          cart.add({
+            data: {
+              tel:app.globalData.tel,
+              des: res.data.des,
+              imgurl: res.data.imgurl,
+              number: '1',
+              price: res.data.price,
+              title: res.data.title,
+              type: res.data.title,
+              used:res.data.used,
+              checked:false,
             }
-            that.onLoad(that.data.t)
+          }).then(() => {
+              let number=parseInt(that.data.number-1)
+              if(number!==0){
+                that.setData({
+                  number:number
+                })
+              }else{
+                that.setData({
+                  disbaled:true
+                })
+              }
+              that.onLoad(that.data.t)
+          })
+        
         })
-      })
-    }
+    })
+  }
   },
   delproduct: function (e) {
     let that = this
@@ -110,6 +129,6 @@ Page({
     productInfo.doc(id).remove().then(() => {
       that.onLoad(that.data.t)
     })
+    cart.doc(id).remove()
   },
-  
 })

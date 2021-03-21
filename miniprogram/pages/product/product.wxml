@@ -7,7 +7,7 @@
     <van-card data-index="{{index}}" data-id="{{item._id}}" num="{{item.number}}" price="{{item.price}}"
       desc="{{item.des}}" title="{{item.title}}" thumb="{{item.imgurl[0]}}"  thumb-link="../detail/detail?id={{item._id}}">
       <view slot="footer">
-        <van-button size="mini" wx:if="{{!(item.tel==tel)}}" data-id="{{item._id}}" disabled="{{item.disabled}}" bindtap="addCart">添加到购物车</van-button>
+        <van-button size="mini" wx:if="{{!(item.tel==tel)}}" disabled="{{disabled}}" data-id="{{item._id}}"  bindtap="addCart">添加到购物车</van-button>
         <van-button wx:if="{{item.tel==tel}}" class="delbutton" type="danger" size="mini" data-id="{{item._id}}"
           bindtap="delproduct">删除</van-button>
       </view>
