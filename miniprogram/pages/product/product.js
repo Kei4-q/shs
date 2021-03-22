@@ -90,6 +90,11 @@ Page({
               }
             })
           }
+          wx.showToast({
+            title: '添加成功',
+            icon:'success',
+            duration:2000
+          })
         }).catch(()=>{
           cart.add({
             data: {
@@ -111,6 +116,11 @@ Page({
                   number:number
                 })
               }
+              wx.showToast({
+                title: '添加成功',
+                icon:'success',
+                duration:2000
+              })
               that.onLoad(that.data.t)
           })
         
