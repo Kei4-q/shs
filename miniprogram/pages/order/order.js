@@ -31,7 +31,7 @@ Page({
         donelist: res.data
       })
     })
-    if(!that.data.notdonelist.length && !that.data.donelist.length){
+    if(that.data.notdonelist.length==0 && that.data.donelist.length==0){
       that.setData({
         empty:true
       })

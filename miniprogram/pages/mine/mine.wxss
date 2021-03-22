@@ -126,3 +126,13 @@
 .loginconten{
 color: #888;
 }
+.quit{
+  width: 100%;
+  height: 100rpx;
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+  line-height: 100rpx;
+  background-color: red;
+  color: #fff;
+}

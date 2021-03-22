@@ -160,5 +160,19 @@ Page({
     wx.navigateTo({
       url: '/pages/login/login',
     })
+  },
+  quit:function(){
+    let that=this
+    app.globalData.user_id='',
+    app.globalData.username='',
+    app.globalData.password='',
+    app.globalData.tel='',
+    app.globalData.wxNum='',
+    app.globalData.qqNum='',
+    app.globalData.user_image=''
+    that.setData({
+      login:false
+    })
+    that.onShow();
   }
 })

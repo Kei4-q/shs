@@ -48,6 +48,7 @@
     </view> 
 </van-collapse-item>
 </van-collapse>
+<view bindtap="quit" class="quit">退出登录</view>
 </view>
 <view class="login" wx:else>
   <view class="loginconten">请点击按钮登录</view>
