@@ -18,6 +18,7 @@ Page({
     number:'',
     price:'',
     tel:'',
+    city:'',
     imgurl1:'../../images/upload.png',
     imgurl2:'../../images/upload.png',
     imgurl3:'../../images/upload.png',
@@ -41,6 +42,7 @@ Page({
         price:options.price,
         upimgurl:options.imgurl,
         tel:options.tel,
+        city:options.city,
         change:true
       })
     }
@@ -80,6 +82,12 @@ Page({
     let type=e.detail.value
     that.setData({
       type:type
+    })
+  },
+  cityChange(e) {
+    let that=this
+    that.setData({
+     city:e.detail
     })
   },
   upimg1:function(){

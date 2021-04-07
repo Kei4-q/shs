@@ -6,6 +6,7 @@
   <van-field value="{{ used }}" label="已用年限" placeholder="{{used}}" bind:change="usedChange" />
   <van-field value="{{ number}}" label="数量" placeholder="{{nubmer}}" bind:change="numChange" />
   <van-field value="{{ price }}" label="价格" placeholder="{{price}}" bind:change="priceChange" />
+  <van-field value="{{ city }}" label="所在城市" placeholder="{{city}}" bind:change="cityChange" />
 </van-cell-group>
 <view class="upimg">
   <view class="content">上传图片</view>

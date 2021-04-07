@@ -9,7 +9,19 @@
 <van-cell title="价格" value="{{'￥'+price}}" />
 <van-cell title="数量" value="{{number}}" />
 <van-cell title="使用年限" value="{{used}}" />
+<van-cell title="所在城市" value="{{city}}" />
+<van-button type="info" plain bindtap="showInfo">面对面交易</van-button>
 <van-goods-action>
   <van-goods-action-button text="加入购物车" type="warning" bindtap="addCart" />
   <van-goods-action-button text="立即购买" bindtap="buyClick" />
 </van-goods-action>
+<van-overlay show="{{ show }}" bind:click="onClickHide">
+  <view class="wrapper">
+    <view class="block">
+      <view class="ower">所有者信息</view>
+      <van-cell title="手机号" value="{{tel}}" />
+      <van-cell title="微信号" value="{{wxNum}}" />
+      <van-cell title="QQ号" value="{{qqNum}}" />
+    </view>
+  </view>
+</van-overlay>
