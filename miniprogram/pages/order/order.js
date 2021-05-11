@@ -11,7 +11,7 @@ Page({
   data: {
     donelist: [],
     notdonelist: [],
-    empty:false
+    empty:true
   }, 
   onShow: function () {
     let that = this
@@ -19,9 +19,15 @@ Page({
       tel:_.eq(app.globalData.tel),
       done: false
     }).get().then(res => {
+      console.log(res.data)
       that.setData({
         notdonelist: res.data,
       })
+      if(res.data.length!==0){
+        that.setData({
+          empty:false
+        })
+      }
     })
     order.where({
       tel:_.eq(app.globalData.tel),
@@ -30,12 +36,12 @@ Page({
       that.setData({
         donelist: res.data
       })
+      if(res.data.length!==0){
+        that.setData({
+          empty:false
+        })
+      }
     })
-    if(that.data.notdonelist.length==0 && that.data.donelist.length==0){
-      that.setData({
-        empty:true
-      })
-    }
   },
   delorder: function (e) {
     let that = this
@@ -50,5 +56,10 @@ Page({
     wx.navigateTo({
       url: '/pages/commitorder/commitorder?id='+id,
     })
-  }
+  },
+  searchClick: function () {
+    wx.navigateTo({
+      url: '/pages/search/search'
+    })
+  },
 })

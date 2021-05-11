@@ -7,6 +7,7 @@ const records=db.collection('his_records')
 // 云函数入口函数
 exports.main = async () => {
  return await records.where({
+   tel:db.command.eq(app.globalData.tel),
    record:true
  }).remove()
 }

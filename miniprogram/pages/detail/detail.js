@@ -110,7 +110,7 @@ Page({
     userinfo.where({
       tel:that.data.tel
     }).get().then(res=>{
-      console.log(res)
+      console.log(res.data[0])
      that.setData({
        show:true,
        wxNum:res.data[0].wxNum,

@@ -10,7 +10,7 @@ Page({
     password: '',
     psd_again: ''
   },
-  onLoad: function (options) {
+  onLoad: function () {
     wx.setNavigationBarTitle({
       title: '注册',
     })

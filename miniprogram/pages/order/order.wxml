@@ -1,6 +1,7 @@
 <!--pages/order/order.wxml-->
-
-<view wx:if="{{empty}}">
+<van-search value="{{ value }}" placeholder="请输入搜索关键词" bindtap="searchClick" />
+<view class="empty" wx:if="{{empty}}">目前还没有订单哦！</view>
+<view wx:else>
 <van-divider contentPosition="center">未完成订单</van-divider>
 <view class="order" wx:for="{{notdonelist}}" wx:for-item="item" wx:for-index="index" wx:key="index">
   <view data-id="{{item._id}}" bindtap="orderdetail">
@@ -22,4 +23,3 @@
   <van-button type="default" data-id="{{item._id}}" size="small" bindtap="delorder">删除</van-button>
 </view>
 </view>
-<view class="empty" wx:else >目前还没有订单哦！</view>

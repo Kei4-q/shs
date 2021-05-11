@@ -111,6 +111,7 @@ Page({
           order: orderlist
         }
       }).then(() => {
+        
         wx.navigateTo({
           url: '/pages/commitorder/commitorder',
         })

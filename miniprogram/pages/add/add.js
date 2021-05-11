@@ -33,19 +33,26 @@ Page({
     let that=this
     let arr=Object.keys(options)
     if(arr.length!==0){
-      that.setData({
-        id:options.id,
-        title:options.title,
-        des:options.des,
-        used:options.used,
-        number:options.number,
-        price:options.price,
-        upimgurl:options.imgurl,
-        tel:options.tel,
-        city:options.city,
-        change:true
-      })
+    const imgurl=options.imgurl.split(',')
+    console.log(imgurl)
+    that.setData({
+      id:options.id,
+      title:options.title,
+      des:options.des,
+      used:options.used,
+      number:options.number,
+      price:options.price,
+      imgurl1:imgurl[0],
+      imgurl2:imgurl[1],
+      imgurl3:imgurl[2],
+      tel:options.tel,
+      city:options.city,
+      change:true
+    })
     }
+    // if(arr.length!==0){
+     
+    // }
   },
   titleChange(e) {
     let that=this 
@@ -187,6 +194,7 @@ Page({
         used:that.data.used,
         number:that.data.number,
         price:that.data.price,
+        city:that.data.city,
         imgurl:that.data.upimgurl,
         disabled:false
       }
@@ -211,7 +219,7 @@ Page({
       used:that.data.used,
       number:that.data.number,
       price:that.data.price,
-      imgurl:that.data.upimgurl
+      city:that.data.city,
     }
     }).then(()=>{
       wx.showToast({

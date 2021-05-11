@@ -19,7 +19,8 @@
   price="{{item.price}}"
   desc="{{item.des}}"
   title="{{item.title}}"
-  thumb="{{item.imgurl}}"
+  thumb="{{item.imgurl[0]}}"
+  thumb-link="../detail/detail?id={{item._id}}"
 >
   <view slot="footer">
     <van-button size="mini">添加到购物车</van-button>

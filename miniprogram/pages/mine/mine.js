@@ -91,10 +91,11 @@ Page({
       wxNum:that.data.wxNum,
       qqNum:that.data.qqNum
     }
-    }).then(res=>{
-      app.globalData.tel=res.data.tel
-      app.globalData.wxNum=res.data.wxNum
-      app.globalData.qqNum=res.data.qqNum
+    }).then(()=>{
+    app.globalData.tel=that.data.tel
+    app.globalData.wxNum=that.data.wxNum
+    app.globalData.qqNum=that.data.qqNum
+
     })
   },
   addaddress:function(){
@@ -153,7 +154,7 @@ Page({
     let index=e.target.dataset.index
     let personpro=that.data.personpro
     wx.navigateTo({
-      url: '/pages/add/add?tel='+personpro[index].tel+'&title='+personpro[index].title+'&type='+personpro[index].type+'&des='+personpro[index].des+'&used='+personpro[index].used+'&number='+personpro[index].number+'&price='+personpro[index].price+'&imgurl='+personpro[index].imgurl+'&tel='+personpro[index].tel+'&id='+personpro[index]._id
+      url: '/pages/add/add?tel='+personpro[index].tel+'&title='+personpro[index].title+'&type='+personpro[index].type+'&des='+personpro[index].des+'&used='+personpro[index].used+'&number='+personpro[index].number+'&price='+personpro[index].price+'&imgurl='+personpro[index].imgurl+'&tel='+personpro[index].tel+'&id='+personpro[index]._id+'&city='+personpro[index].city
     })
   },
   loginClick:function(){

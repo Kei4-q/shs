@@ -89,6 +89,7 @@ Page({
             record.add({
               data: {
                 record:true,
+                tel:app.globalData.tel,
                 content: that.data.search
               }
             }).then(() => {

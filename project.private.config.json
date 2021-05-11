@@ -33,7 +33,7 @@
         {
           "name": "pages/mine/mine",
           "pathName": "pages/mine/mine",
-          "query": "",
+          "query": "tel=13534580048",
           "scene": null
         },
         {
@@ -75,6 +75,7 @@
         {
           "name": "pages/register/register",
           "pathName": "pages/register/register",
+          "query": "",
           "scene": null
         }
       ]
